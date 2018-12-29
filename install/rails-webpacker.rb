@@ -1,5 +1,6 @@
 # Hyperstack
 
+run "rvm use ruby-2.5.3"
 # ----------------------------------- Commit so we have good history of these changes
 
 git :init
@@ -9,7 +10,9 @@ git commit: "-m 'Initial commit: Rails base'"
 # ----------------------------------- Add the gems
 
 gem 'webpacker'
-gem 'rails-hyperstack', '~> 1.0.alpha1.2' # github: 'hyperstack-org/hyperstack', branch: 'edge', glob: 'ruby/*/*.gemspec'
+
+# if present, can't be found; if not, all good until attempt to run $ forman start
+# gem 'rails-hyperstack', '~> 1.0.alpha1.2' # github: 'hyperstack-org/hyperstack', branch: 'edge', glob: 'ruby/*/*.gemspec'
 
 gem_group :development do
   gem 'foreman'
@@ -184,7 +187,7 @@ route "mount Hyperstack::Engine => '/hyperstack'"
 # ----------------------------------- Commit Hyperstack setup
 
 after_bundle do
-  run 'bundle exec rails webpacker:install'
   git add:    "."
   git commit: "-m 'Hyperstack config complete'"
 end
+
