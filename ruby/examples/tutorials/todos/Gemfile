@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.4.1'
+ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.1'
+gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -47,6 +47,7 @@ gem 'hyper-operation', path: '../../../hyper-operation'
 gem 'hyperstack-config', path: '../../../hyperstack-config'
 
 #gem 'hyper-component', path: '../hyperstack/ruby/hyper-component'
+gem 'opal-rails', '~> 0.9.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -74,6 +75,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development do
-  #gem 'opal_hot_reloader', github: 'hyperstack-org/opal-hot-reloader' #path: '../opal-hot-reloader' #github: 'hyperstack-org/opal-hot-reloader'
+  # gem 'opal_hot_reloader', github: 'hyperstack-org/opal-hot-reloader' #path: '../opal-hot-reloader' #github: 'hyperstack-org/opal-hot-reloader'
   gem 'foreman'
 end
