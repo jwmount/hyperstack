@@ -1,6 +1,5 @@
 # Hyperstack
 
-run "rvm use ruby-2.5.3"
 # ----------------------------------- Commit so we have good history of these changes
 
 git :init
