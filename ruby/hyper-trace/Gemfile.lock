@@ -4,7 +4,7 @@ PATH
     hyperstack-config (0.1)
       libv8 (~> 6.3.0)
       listen (~> 3.0)
-      mini_racer (~> 0.1.15)
+      mini_racer (~> 0.2.4)
       opal (>= 0.11.0, < 0.12.0)
       opal-browser (~> 0.2.0)
       uglifier
@@ -35,7 +35,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     mini_portile2 (2.3.0)
-    mini_racer (0.1.15)
+    mini_racer (0.2.4)
       libv8 (~> 6.3)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
