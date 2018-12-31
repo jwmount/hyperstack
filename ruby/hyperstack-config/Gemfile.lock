@@ -6,7 +6,7 @@ PATH
       chromedriver-helper (= 1.2.0)
       libv8 (~> 6.3.0)
       method_source
-      mini_racer (~> 0.1.15)
+      mini_racer (~> 0.2.4)
       opal (>= 0.11.0, < 0.12.0)
       parser (>= 2.3.3.1)
       pry
@@ -23,7 +23,7 @@ PATH
     hyperstack-config (1.0.alpha1.2)
       libv8 (~> 6.3.0)
       listen (~> 3.0)
-      mini_racer (~> 0.1.15)
+      mini_racer (~> 0.2.4)
       opal (>= 0.11.0, < 0.12.0)
       opal-browser (~> 0.2.0)
       uglifier
@@ -137,7 +137,7 @@ GEM
     mimemagic (0.3.2)
     mini_mime (1.0.1)
     mini_portile2 (2.3.0)
-    mini_racer (0.1.15)
+    mini_racer (0.2.4)
       libv8 (~> 6.3)
     minitest (5.11.3)
     nio4r (2.3.1)
