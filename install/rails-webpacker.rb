@@ -14,7 +14,7 @@ gem 'webpacker'
 # gem 'rails-hyperstack', '~> 1.0.alpha1.2' # github: 'hyperstack-org/hyperstack', branch: 'edge', glob: 'ruby/*/*.gemspec'
 
 gem_group :development do
-  gem 'mini_racer', '0.2.4'.          #JWM experiment, can we force bundler to use this from the repo?
+  gem 'mini_racer', '0.2.4'.          #JWM experiment, can we force bundler to use this from the repo?  Appears not.
   gem 'foreman'
 end
 
