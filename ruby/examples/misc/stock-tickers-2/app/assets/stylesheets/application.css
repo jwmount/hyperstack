@@ -13,23 +13,22 @@
  *= require_tree .
  *= require_self
  */
+/* The animation code */
+/* highlite field and fade back to background over 4 seconds */
 
-body {
-  background-color: lightgrey
-  ;
-}
-h1, h3 {
-  color: blue;
-}
-h3 {
-  color: orange;
-}
-p {
-  color: red;
+/*
+ * class .text-highlite
+ */
+@keyframes example {
+  from {background-color: green;}
+  to {background-color: white;}
 }
 
-table {
-   color: grey;
+/* The element to apply the animation to */
+div.text-highlite {
+  width: 100px;
+  height: 24px;
+  background-color: white;
+  animation-name: example;
+  animation-duration: 4s;
 }
-
-

@@ -4,8 +4,7 @@ class JSExamples < HyperComponent
     MyModal()
     Sem.Divider(hidden: true) # Sem is a JS library
     SelectDate()
-    p "so there"
-  end
+   end
 end
 
 class MyModal < HyperComponent

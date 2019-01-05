@@ -8,14 +8,14 @@ class HtmlDslExample < HyperComponent
     end
 
     TABLE(class: 'ui celled table') do
-      THEAD do
+      THEAD(class: HTML) do
         TR do
           TH { 'One' }
           TH { 'Two' }
           TH { 'Three' }
         end
       end
-      TBODY do
+      TBODY(class: 'ui celled table back-ground') do
         TR do
           TD { 'A' }
           TD(class: 'negative') { 'B' }
