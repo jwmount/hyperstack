@@ -22,7 +22,7 @@
  * highlite field and fade back to background over 4 seconds
  */
 @keyframes example {
-  from {background-color: green;}
+  from {background-color: orange;}
   to {background-color: white;}
 }
 /* The element to apply the animation to */
