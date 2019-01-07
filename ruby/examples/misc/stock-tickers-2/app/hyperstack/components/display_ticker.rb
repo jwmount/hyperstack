@@ -14,31 +14,38 @@ class DisplayTicker < HyperComponent
   # will be mutated, causing the component to rerender, and displaying new data.
   # line 1834 in /Users/john/DEVO/hyperstack/ruby/examples/misc/stock-tickers-2/node_modules/jss-nested/benchmark/fixtures/modified-bootstrap.json:
 
+
   def status
     case @_ticker.status
     when :loading
       BS::Col(sm: 10) { 'loading...' }
     when :success
-      BS::Col(class: 'text-highlite', sm: 1) { 'price' }
-      BS::Col(class: 'text-highlite', sm: 1) { '$%.2f' % @_ticker.price }  #tag at line 1832
-      BS::Col(sm: 2) { "at #{@_ticker.time.strftime('%I:%M:%S')}" }
+      BS::Col(class: 'text-highlite', sm: 1) { 'price:' }
+      BS::Col(class: 'text-highlite-right', sm: 1) { '$%.2f' % @_ticker.price }  #tag at line 1832
+      BS::Col(class: 'text-highlite', sm: 2) { "at #{@_ticker.time.strftime('%I:%M:%S')}" }
     when :failed
       BS::Col(sm: 4) { "failed to get quote: #{@_ticker.reason}" }
     end
   end
-
+      
   # Render the ticker.  Most of the work is done in the status method, but
   # here we attach a close button using the BS `close` class (shown by an X)
   # when the close button is clicked we trigger the `cancel` event.
 
   render do
     BS::Row() do
-      BS::Col(sm: 1) { @Symbol.upcase }
+      BS::Col(class: 'text-highlite', sm: 1) { @Symbol.upcase }
       status
       BS::Col(sm: 1) do
-        BS::Button(class: :close) { "\u00D7" }
+        BS::Button(class: :close) { "\u0073" }                       # 's' Save (persist)
         .on(:click) { cancel! } unless @_ticker.status == :loading
+        BS::Button(class: :close) { "\u0072" }                       # 'r' Refresh
+        .on(:click) { cancel! } unless @_ticker.status == :loading        
+        BS::Button(class: :close) { "\u0078" }                       # 'x' cancel (wrong symbol?)
+        .on(:click) { cancel! } unless @_ticker.status == :loading        
       end
     end
   end
 end
+
+
