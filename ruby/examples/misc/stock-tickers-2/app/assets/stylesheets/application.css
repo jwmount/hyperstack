@@ -43,3 +43,12 @@ div.text-highlite-right {
   text-align: right;
 }
 
+div.text-highligt-underline {
+  width: 100px;
+  height: 24px;
+  border-bottom-color: white;
+  animation-name: example;
+  animation-duration: 4s;  
+  border-bottom: 1px solid red;
+}
+

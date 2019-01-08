@@ -18,7 +18,7 @@ class DisplayTicker < HyperComponent
   def status
     case @_ticker.status
     when :loading
-      BS::Col(sm: 10) { 'loading...' }
+      BS::Col(class: 'text-highlite', sm: 10) { 'testing...' }
     when :success
       BS::Col(class: 'text-highlite', sm: 1) { 'price:' }
       BS::Col(class: 'text-highlite-right', sm: 1) { '$%.2f' % @_ticker.price }  #tag at line 1832
